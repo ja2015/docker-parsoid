@@ -18,3 +18,4 @@ RUN curl -L https://github.com/krallin/tini/releases/download/${TINI_VERSION}/ti
         && chmod +x /usr/bin/tini
 
 COPY init /
+RUN chmod +x /init
