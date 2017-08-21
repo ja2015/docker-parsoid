@@ -4,13 +4,12 @@ MAINTAINER <ja2015>
 EXPOSE 8000
 ENTRYPOINT [ "/init" ]
 
-ENV PARSOID_VERSION 0.6.1
-ENV TINI_VERSION v0.14.0
+ENV TINI_VERSION v0.15.0
 
 RUN apk --update --no-cache add \
         bash curl git
 
-RUN npm install parsoid@${PARSOID_VERSION} \
+RUN npm install parsoid@latest \
         && npm cache clean \
         && rm -rf /tmp/npm* /root/.node* /root/.npm
 
