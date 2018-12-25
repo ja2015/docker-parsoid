@@ -4,7 +4,7 @@ MAINTAINER <ja2015>
 EXPOSE 8000
 ENTRYPOINT [ "/init" ]
 
-ENV TINI_VERSION v0.16.1
+ENV TINI_VERSION v0.18.0
 
 RUN apk --update --no-cache add \
         bash curl git
